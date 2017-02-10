@@ -1,0 +1,47 @@
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+group 'spring-docs-generation'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    jcenter()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    //spring
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-test')
+    compile "io.springfox:springfox-swagger2:2.6.1"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'io.springfox:springfox-staticdocs:2.6.1'
+    compile 'io.springfox.ui:springfox-swagger-ui-rfc6570:1.0.0'
+
+
+
+}
+
+
+
+
+
