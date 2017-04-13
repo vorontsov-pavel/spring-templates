@@ -9,3 +9,8 @@
 ### Hibernate sandbox for testing
 
 ### Spring API documentation generation with Swagger and static parsing
+
+# TODO
+## Spring 5 Reactive
+## Spring Cloud + microservice
+## Spring Batch
